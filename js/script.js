@@ -11,6 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
+//created var quotes with value of array with objs
 let quotes = [{quote:'', source:'', citation: ''},{quote:'', source:'', year:''},{quote:'', source:''},{quote:'', source:''},{quote:'', source:''}];
 
 
@@ -18,6 +19,14 @@ let quotes = [{quote:'', source:'', citation: ''},{quote:'', source:'', year:''}
  * `getRandomQuote` function
 ***/
 
+//why do we not need to pass quotes as our argument?
+function getRandomQuote(){
+  //this is giving you the index of the array
+  const randomNum = parseInt(Math.floor(Math.random * quotes.length));
+ 
+
+  return quotes[randomNum];
+}
 
 
 /***

@@ -11,6 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
+let quotes = [{quote:'', source:'', citation: ''},{quote:'', source:'', year:''},{quote:'', source:''},{quote:'', source:''},{quote:'', source:''}];
 
 
 /***

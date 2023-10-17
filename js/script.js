@@ -28,7 +28,7 @@ function getRandomQuote(){
   //this is giving you the index of the array
   //using parseInt to confirm result comes back as int
   const randomNum = parseInt(Math.floor(Math.random() * quotes.length));
- console.log(randomNum, quotes[randomNum]);
+  console.log(randomNum, quotes[randomNum]);
 
   return quotes[randomNum];
 }
@@ -61,9 +61,9 @@ function printQuote(){
    //created a var with a str value of quote and source
   let htmlStr = `<p class="quote"> ${grabQuote.quote} </p>
   <p class="source"> ${grabQuote.source}
-`
-//created an if statment stating "if within the quote we find either citation or year, 
-//add that to our htmlStr"
+  `
+  //created an if statment stating "if within the quote we find either citation or year, 
+  //add that to our htmlStr"
   if(grabQuote.citation){
      htmlStr += `<span class="citation">${grabQuote.citation}</span>`
      console.log(grabQuote.citation)
@@ -76,11 +76,11 @@ function printQuote(){
   //this line is including the closing tag
   htmlStr += '</p>';
 
-//grabbing id 'quote-box' from our HTML to insert the quote
-document.getElementById('quote-box').innerHTML = htmlStr; 
+  //grabbing id 'quote-box' from our HTML to insert the quote
+  document.getElementById('quote-box').innerHTML = htmlStr; 
 
-//grabbing body element and using style to change background color
-document.querySelector('body').style.backgroundColor = getRandomColor();
+  //grabbing body element and using style to change background color
+  document.querySelector('body').style.backgroundColor = getRandomColor();
 }
 
 

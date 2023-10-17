@@ -33,6 +33,17 @@ function getRandomQuote(){
   return quotes[randomNum];
 }
 
+//extra credit
+const getRandomColor = () => {
+  // generating a random number and converting it to an integar, range of 255
+  const r = parseInt(Math.random() * 256);
+  const g = parseInt(Math.random() * 256);
+  const b = parseInt(Math.random() * 256);
+  //using three generated random numbers to create rgb color 
+  const rgbcolor = `rgb(${r}, ${g}, ${b})`;
+  return rgbcolor;
+}
+
 
 
 /***
@@ -67,8 +78,10 @@ function printQuote(){
 
 //grabbing id 'quote-box' from our HTML to insert the quote
 document.getElementById('quote-box').innerHTML = htmlStr; 
-}
 
+//grabbing body element and using style to change background color
+document.querySelector('body').style.backgroundColor = getRandomColor();
+}
 
 
 /***

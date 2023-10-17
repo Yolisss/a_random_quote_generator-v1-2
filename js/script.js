@@ -23,9 +23,10 @@ let quotes = [{quote:"The flower that blooms in adversity is the most rare and b
  * `getRandomQuote` function
 ***/
 
-//why do we not need to pass quotes as our argument?
+
 function getRandomQuote(){
   //this is giving you the index of the array
+  //using parseInt to confirm result comes back as int
   const randomNum = parseInt(Math.floor(Math.random() * quotes.length));
  console.log(randomNum, quotes[randomNum]);
 
@@ -40,12 +41,18 @@ function getRandomQuote(){
 
 
 function printQuote(){
+
+  //creating a var with the getRandomQuote as the value
+  //within this function, we now have access to the quotes 
   let grabQuote = getRandomQuote();
    //console.log(grabQuote);
 
+   //created a var with a str value of quote and source
   let htmlStr = `<p class="quote"> ${grabQuote.quote} </p>
   <p class="source"> ${grabQuote.source}
 `
+//created an if statment stating "if within the quote we find either citation or year, 
+//add that to our htmlStr"
   if(grabQuote.citation){
      htmlStr += `<span class="citation">${grabQuote.citation}</span>`
      console.log(grabQuote.citation)
@@ -53,9 +60,12 @@ function printQuote(){
      htmlStr += `<span class="year">${grabQuote.year}</span>`
      console.log(grabQuote.year)
   }
+
+  //htmlStr is a str with only opening paragraph, 
+  //this line is including the closing tag
   htmlStr += '</p>';
 
-
+//grabbing id 'quote-box' from our HTML to insert the quote
 document.getElementById('quote-box').innerHTML = htmlStr; 
 }
 

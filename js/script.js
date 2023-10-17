@@ -39,7 +39,25 @@ function getRandomQuote(){
 ***/
 
 
+function printQuote(){
+  let grabQuote = getRandomQuote();
+   //console.log(grabQuote);
 
+  let htmlStr = `<p class="quote"> ${grabQuote.quote} </p>
+  <p class="source"> ${grabQuote.source}
+`
+  if(grabQuote.citation){
+     htmlStr += `<span class="citation">${grabQuote.citation}</span>`
+     console.log(grabQuote.citation)
+  } if(grabQuote.year){
+     htmlStr += `<span class="year">${grabQuote.year}</span>`
+     console.log(grabQuote.year)
+  }
+  htmlStr += '</p>';
+
+
+document.getElementById('quote-box').innerHTML = htmlStr; 
+}
 
 
 
